@@ -1,42 +1,42 @@
 USE employee_trackerDB;
 
-INSERT INTO department (id, name)
+INSERT INTO department (department)
 VALUES 
-(1, "Sales"), 
-(2, "Engineering"), 
-(3,  "Finance"), 
-(4, "Legal");
+("Sales"), 
+("Engineering"), 
+("Finance"), 
+("Legal");
 
-INSERT INTO role (id, title, salary, department_id)
+INSERT INTO role (title, salary, department_id)
 VALUES 
-(1, "Sales Lead", 100000, 1), 
-(2, "Salesperson", 80000, 1), 
-(3, "Lead Engineer", 150000, 2), 
-(4, "Software Engineer", 120000, 2), 
-(5, "Accountant", 125000, 3), 
-(6, "Legal Team Lead", 250000, 4), 
-(7, "Lawyer", 190000, 4);
+("Sales Lead", 100000, 1), 
+("Salesperson", 80000, 1), 
+("Lead Engineer", 150000, 2), 
+("Software Engineer", 120000, 2), 
+("Accountant", 125000, 3), 
+("Legal Team Lead", 250000, 4), 
+("Lawyer", 190000, 4);
 
-INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES 
-(1, "John", "Doe", 1, 1), 
-(2, "Mike", "Chan", 2, 2), 
-(3, "Ashley", "Rodriguez", 3, null),
-(4, "Kevin", "Tupik", 4, 1), 
-(5, "Malia", "Brown", 5, null), 
-(6, "Sarah", "Lourd", 6, null), 
-(7, "Tom", "Allen", 7, 3), 
-(8, "Christian", "Eckenrode", 3, 5), 
-(9, "Tammer", "Galal", 4, 6); 
+("John", "Doe", 1, 1), 
+("Mike", "Chan", 2, 2), 
+("Ashley", "Rodriguez", 3, null),
+("Kevin", "Tupik", 4, 1), 
+("Malia", "Brown", 5, null), 
+("Sarah", "Lourd", 6, null), 
+("Tom", "Allen", 7, 3), 
+("Christian", "Eckenrode", 3, 5), 
+("Tammer", "Galal", 4, 6); 
 
-INSERT INTO manager (id, name)
+INSERT INTO manager (manager)
 VALUES 
-(1, "Ashley Rodriguez"), 
-(2, "John Doe"), 
-(3, "Sarah Lourd"), 
-(4, "Malia Brown"),
-(5, "Mike Chan"),
-(6, "Kevin Tupik");
+("Ashley Rodriguez"), 
+("John Doe"), 
+("Sarah Lourd"), 
+("Malia Brown"),
+("Mike Chan"),
+("Kevin Tupik");
 
 
 
