@@ -10,6 +10,8 @@ This CLI application allows the user to store and manipulate data from employees
 
 Click on the link below for a video demo of the application.
 
+[![Employee_Tracker_Demo](http://img.youtube.com/vi/5lmETeVtslI/0.jpg)](http://www.youtube.com/watch?v=5lmETeVtslI "Employee_Tracker")
+
 
 
 
