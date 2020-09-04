@@ -19,24 +19,23 @@ VALUES
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES 
-("John", "Doe", 1, 1), 
-("Mike", "Chan", 2, 2), 
-("Ashley", "Rodriguez", 3, null),
-("Kevin", "Tupik", 4, 1), 
-("Malia", "Brown", 5, null), 
-("Sarah", "Lourd", 6, null), 
-("Tom", "Allen", 7, 3), 
-("Christian", "Eckenrode", 3, 5), 
-("Tammer", "Galal", 4, 6); 
+("Oscar", "Wilde", 1, 1), 
+("James", "Joyce", 2, 2), 
+("Clarice", "Lispector", 3, null),
+("Jane", "Austen", 4, 1), 
+("George", "Orwell", 5, null), 
+("Bell", "Hooks", 6, null), 
+("Charles", "Dickens", 7, 3), 
+("Kurt", "Vonnegut", 5, 4), 
+("Maya", "Angelou", 4, 6); 
 
 INSERT INTO manager (manager)
 VALUES 
-("Ashley Rodriguez"), 
-("John Doe"), 
-("Sarah Lourd"), 
-("Malia Brown"),
-("Mike Chan"),
-("Kevin Tupik");
+("Clarice Lispector"), 
+("Oscar Wilde"), 
+("Bell Hooks"), 
+("George Orwell"),
+("Jane Austen");
 
 
 

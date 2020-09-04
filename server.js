@@ -1,8 +1,6 @@
 const mysql = require("mysql");
 const inquirer = require("inquirer");
 const cTable = require("console.table");
-// const view = require("./view");
-
 
 var connection = mysql.createConnection({
   host: "localhost",
@@ -176,12 +174,12 @@ function employeesByManager() {
       type: "list",
       message: "Which manager's team would you like to view?",
       choices: [
-        "Ashley Rodriguez",
-        "John Doe",
-        "Sarah Lourd",
-        "Malia Brown",
-        "Mike Chan",
-        "Kevin Tupik",
+        "Clarice Lispector", 
+        "Oscar Wilde", 
+        "Bell Hooks", 
+        "George Orwell",
+        "James Joyce",
+        "Jane Austen"
       ]
     })
     .then(function (answers) {
@@ -439,7 +437,7 @@ function updateManager() {
       let updatedManager = answers.updateManager;
       let firstName = answers.firstName;
       let lastName = answers.lastName;
-      const query = "SELECT department_id, department.department, SUM(role.salary) as total_budget FROM employee LEFT JOIN role ON employee.role_id = role.id LEFT JOIN manager ON employee.manager_id = manager.id LEFT JOIN department ON role.department_id = department.id ORDER BY department.id ASC";
+      const query = "UPDATE employee SET manager_id = ? WHERE first_name = ? AND last_name = ? ORDER BY id ASC";
       connection.query(query, [updatedManager, firstName, lastName], function (err) {
         if (err) throw err;
         console.log("\n -----------------------------------------------------------\n");
