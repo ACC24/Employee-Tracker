@@ -8,7 +8,7 @@ var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "Xapman9632147",
+  password: "mypassword",
   database: "employee_trackerDB"
 });
 
@@ -260,7 +260,6 @@ function addEmployee() {
         console.log("\n ----------------------------------------\n");
         viewEmployees();
       });
-      init();
     });
 };
 
@@ -295,8 +294,7 @@ function addRole() {
         console.log("\n ----------------------------------------\n");
         viewRoles();
       });
-      init();
-    });
+         });
 };
 
 function addDepartment() {
@@ -316,7 +314,6 @@ function addDepartment() {
         console.log("\n ----------------------------------------\n");
         viewDepartments();
       });
-      init();
     });
 };
 
@@ -343,7 +340,6 @@ function removeEmployee() {
         console.log("\n ----------------------------------------\n");
         viewEmployees();
       });
-      init();
     });
 };
 
@@ -364,11 +360,10 @@ function removeRole() {
         console.log("\n ----------------------------------------\n");
         viewRoles();
       });
-      init();
     });
 };
 
-function removeDepartment() {.
+function removeDepartment() {
   inquirer
     .prompt([
       {
@@ -385,7 +380,6 @@ function removeDepartment() {.
         console.log("\n ----------------------------------------\n");
         viewDepartments();
       });
-      init();
     });
 };
 
@@ -419,7 +413,6 @@ function updateRole() {
         console.log("\n ----------------------------------------\n");
         viewEmployees();
       });
-      init();
     });
 };
 
@@ -449,15 +442,14 @@ function updateManager() {
       const query = "SELECT department_id, department.department, SUM(role.salary) as total_budget FROM employee LEFT JOIN role ON employee.role_id = role.id LEFT JOIN manager ON employee.manager_id = manager.id LEFT JOIN department ON role.department_id = department.id ORDER BY department.id ASC";
       connection.query(query, [updatedManager, firstName, lastName], function (err) {
         if (err) throw err;
-        console.log("\n ----------------------------------------\n");
+        console.log("\n -----------------------------------------------------------\n");
         viewEmployees();
       });
-      init();
     });
 };
 
 function departmentBudget() {
-  const query = "SELECT department.id, department.department, SUM(role.salary) as total_budget FROM department INNER JOIN role ON role.department_id = department.id GROUP BY department.department";
+  const query = "SELECT department.department, SUM(role.salary) as total_budget FROM employee, role, department WHERE employee.role_id = role.id AND role.department_id = department.id GROUP BY department.department";
   connection.query(query, function (err, res) {
     if (err) throw err;
     console.log("\n ----------------------------------------\n");
