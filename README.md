@@ -8,7 +8,7 @@ This CLI application allows the user to store and manipulate data from employees
 4) View employees by department, role, and manager;
 5) View the utilized budget of each department.
 
-Click on the link below for a video demo of the application.
+Click on the image below for a video demo of the application.
 
 [![Employee_Tracker_Demo](http://img.youtube.com/vi/5lmETeVtslI/0.jpg)](http://www.youtube.com/watch?v=5lmETeVtslI "Employee_Tracker")
 
