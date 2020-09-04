@@ -6,9 +6,9 @@ This CLI application allows the user to store and manipulate data from employees
 2) Update employee's role, department, and manager;
 3) View employees, departments, roles;
 4) View employees by department, role, and manager;
-5) View the utilized budget of each department;
+5) View the utilized budget of each department.
 
-Click on the link below for a video demo of the application
+Click on the link below for a video demo of the application.
 
 
 
